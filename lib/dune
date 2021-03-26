@@ -1,0 +1,13 @@
+(library
+ (name inotify)
+ (public_name inotify)
+ (modules inotify)
+ (foreign_stubs (language c) (names inotify_stubs))
+ (libraries unix))
+
+(library
+ (name lwt_inotify)
+ (public_name inotify.lwt)
+ (modules lwt_inotify)
+ (optional)
+ (libraries lwt.unix))
